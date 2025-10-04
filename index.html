@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ốp lưng iPhone Store | Trang chủ</title>
+  <meta name="description" content="Mua ốp lưng iPhone đẹp - bền - bảo vệ tốt. Nhiều mẫu hot trend cho iPhone 11, 12, 13, 14, 15." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/favicon.png" />
+  <meta property="og:title" content="Ốp lưng iPhone Store" />
+  <meta property="og:description" content="Ốp lưng đẹp cho iPhone 11 → 15. Giao diện đơn giản, dễ mua." />
+  <meta property="og:image" content="images/oplung-iphone12.png" />
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="Trang chủ Ốp lưng iPhone Store">
+        <span class="logo__mark">ỐP</span> <span class="logo__text">iPhone Store</span>
+      </a>
+
+      <form class="search" role="search" action="products.html" method="get">
+        <label for="q" class="sr-only">Tìm kiếm sản phẩm</label>
+        <input id="q" name="q" type="search" placeholder="Tìm ốp lưng, màu sắc, dòng máy..." />
+        <button class="btn btn--primary" type="submit">Tìm</button>
+      </form>
+
+      <nav class="nav" aria-label="Điều hướng chính">
+        <a href="products.html">Sản phẩm</a>
+        <a href="cart.html" class="cart-link" aria-label="Xem giỏ hàng">
+          Giỏ hàng <span id="cart-count" class="badge" aria-live="polite">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Banner -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <h1>Ốp lưng iPhone hot trend</h1>
+        <p>Bảo vệ máy • Chống trầy xước • Nhiều màu sắc thời thượng</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="products.html">Mua ngay</a>
+          <a class="btn btn--ghost" href="products.html?sort=new">Xem hàng mới</a>
+        </div>
+      </div>
+      <picture class="hero__image">
+        <img src="images/banner.png" alt="Banner ốp lưng iPhone" loading="eager" />
+      </picture>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section categories">
+    <div class="container">
+      <div class="section__head">
+        <h2>Chọn theo dòng iPhone</h2>
+        <a class="link" href="products.html">Xem tất cả &rarr;</a>
+      </div>
+
+      <div class="grid grid--auto-fit">
+        <a class="category-card" href="products.html?model=iphone11" aria-label="Ốp lưng iPhone 11">
+          <div class="category-card__thumb">
+            <img src="images/iphone-11.png" alt="Ốp iPhone 11" loading="lazy" />
+          </div>
+          <div class="category-card__body">
+            <h3>iPhone 11</h3>
+            <span class="chip">Xem mẫu</span>
+          </div>
+        </a>
+
+        <a class="category-card" href="products.html?model=iphone12" aria-label="Ốp lưng iPhone 12">
+          <div class="category-card__thumb">
+            <img src="images/iphone-12.png" alt="Ốp iPhone 12" loading="lazy" />
+          </div>
+          <div class="category-card__body">
+            <h3>iPhone 12</h3>
+            <span class="chip">Xem mẫu</span>
+          </div>
+        </a>
+
+        <a class="category-card" href="products.html?model=iphone13" aria-label="Ốp lưng iPhone 13">
+          <div class="category-card__thumb">
+            <img src="images/iphone-13.png" alt="Ốp iPhone 13" loading="lazy" />
+          </div>
+          <div class="category-card__body">
+            <h3>iPhone 13</h3>
+            <span class="chip">Xem mẫu</span>
+          </div>
+        </a>
+
+        <a class="category-card" href="products.html?model=iphone14" aria-label="Ốp lưng iPhone 14">
+          <div class="category-card__thumb">
+            <img src="images/iphone-14.png" alt="Ốp iPhone 14" loading="lazy" />
+          </div>
+          <div class="category-card__body">
+            <h3>iPhone 14</h3>
+            <span class="chip">Xem mẫu</span>
+          </div>
+        </a>
+
+        <a class="category-card" href="products.html?model=iphone15" aria-label="Ốp lưng iPhone 15">
+          <div class="category-card__thumb">
+            <img src="images/iphone-15.png" alt="Ốp iPhone 15" loading="lazy" />
+          </div>
+          <div class="category-card__body">
+            <h3>iPhone 15</h3>
+            <span class="chip">Xem mẫu</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="section featured">
+    <div class="container">
+      <div class="section__head">
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="section__filters" aria-label="Bộ lọc nhanh">
+          <a class="chip" href="products.html?color=den">Đen</a>
+          <a class="chip" href="products.html?color=trang">Trắng</a>
+          <a class="chip" href="products.html?color=trong-suot">Trong suốt</a>
+        </div>
+      </div>
+
+      <div class="grid grid--products">
+        <!-- Product Card 1 -->
+        <article class="product-card" data-id="P001" data-model="iphone12" data-color="trong-suot" data-name="Ốp trong suốt iPhone 12" data-price="129000">
+          <a class="product-card__link" href="product.html?id=P001">
+            <img src="images/op_lung_iphone12_trong_suot.png" alt="Ốp trong suốt iPhone 12" loading="lazy" />
+            <h3 class="product-card__title">Ốp trong suốt iPhone 12</h3>
+          </a>
+          <div class="product-card__price">
+            <span class="price">129.000₫</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="btn btn--sm btn--secondary" data-add-to-cart>Thêm vào giỏ</button>
+          </div>
+        </article>
+
+        <!-- Product Card 2 -->
+        <article class="product-card" data-id="P002" data-model="iphone13" data-color="den" data-name="Ốp nhám đen iPhone 13" data-price="149000">
+          <a class="product-card__link" href="product.html?id=P002">
+            <img src="images/op_lung_iphone13_den_nham.png" alt="Ốp nhám đen iPhone 13" loading="lazy" />
+            <h3 class="product-card__title">Ốp nhám đen iPhone 13</h3>
+          </a>
+          <div class="product-card__price">
+            <span class="price">149.000₫</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="btn btn--sm btn--secondary" data-add-to-cart>Thêm vào giỏ</button>
+          </div>
+        </article>
+
+        <!-- Product Card 3 -->
+        <article class="product-card" data-id="P003" data-model="iphone14" data-color="trang" data-name="Ốp viền trắng iPhone 14" data-price="159000">
+          <a class="product-card__link" href="product.html?id=P003">
+            <img src="images/op_lung_iphone14_vien_trang.png" alt="Ốp viền trắng iPhone 14" loading="lazy" />
+            <h3 class="product-card__title">Ốp viền trắng iPhone 14</h3>
+          </a>
+          <div class="product-card__price">
+            <span class="price">159.000₫</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="btn btn--sm btn--secondary" data-add-to-cart>Thêm vào giỏ</button>
+          </div>
+        </article>
+
+        <!-- Product Card 4 -->
+        <article class="product-card" data-id="P004" data-model="iphone15" data-color="trong-suot" data-name="Ốp chống sốc iPhone 15" data-price="189000">
+          <a class="product-card__link" href="product.html?id=P004">
+            <img src="images/op_lung_iphone15_chong_xoc.png" alt="Ốp chống sốc trong suốt iPhone 15" loading="lazy" />
+            <h3 class="product-card__title">Ốp chống sốc iPhone 15</h3>
+          </a>
+          <div class="product-card__price">
+            <span class="price">189.000₫</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="btn btn--sm btn--secondary" data-add-to-cart>Thêm vào giỏ</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="section__foot">
+        <a class="btn btn--primary" href="products.html">Xem thêm sản phẩm</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- USP / Benefits -->
+  <section class="section usp">
+    <div class="container grid grid--auto-fit">
+      <div class="usp__item">
+        <strong>Bảo vệ tốt</strong>
+        <span>Chống trầy xước, chống sốc</span>
+      </div>
+      <div class="usp__item">
+        <strong>Đổi trả 7 ngày</strong>
+        <span>Nếu lỗi do nhà sản xuất</span>
+      </div>
+      <div class="usp__item">
+        <strong>Miễn phí vận chuyển</strong>
+        <span>Cho đơn từ 300.000₫</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <h4>Ốp lưng iPhone Store</h4>
+        <p>Shop ốp lưng đẹp, bền, nhẹ – hợp mọi phong cách.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Liên kết</h4>
+        <ul>
+          <li><a href="products.html">Sản phẩm</a></li>
+          <li><a href="cart.html">Giỏ hàng</a></li>
+          <li><a href="checkout.html">Thanh toán</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>Email: support@oplung.store</li>
+          <li>Hotline: 0900 000 000</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__copy">© <span id="year"></span> Oplung Store. All rights reserved.</div>
+  </footer>
+
+  <!-- Only common script -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>

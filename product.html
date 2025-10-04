@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chi tiết sản phẩm | Ốp lưng iPhone Store</title>
+  <meta name="description" content="Xem chi tiết ốp lưng iPhone: hình ảnh, giá, màu sắc, mô tả và thêm vào giỏ hàng." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/favicon.png" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">
+        <span class="logo__mark">ỐP</span><span class="logo__text">iPhone Store</span>
+      </a>
+      <form class="search" role="search" action="products.html" method="get">
+        <label for="q" class="sr-only">Tìm kiếm sản phẩm</label>
+        <input id="q" name="q" type="search" placeholder="Tìm ốp lưng, màu sắc, dòng máy..." />
+        <button class="btn btn--primary" type="submit">Tìm</button>
+      </form>
+      <nav class="nav">
+        <a href="products.html">Sản phẩm</a>
+        <a href="cart.html" class="cart-link">Giỏ hàng <span id="cart-count" class="badge">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Product Detail -->
+  <main class="section">
+    <div class="container">
+      <a href="products.html" class="link">&larr; Quay lại danh sách</a>
+
+      <div id="product-detail" class="grid" style="grid-template-columns: 1fr; gap: 20px; margin-top: 12px;">
+        <!-- Gallery -->
+        <section class="product-gallery" style="border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--bg);">
+          <div style="display:grid;grid-template-columns:1fr;gap:0;">
+            <div class="gallery__main" style="padding:14px;">
+              <img id="main-img" src="images/op_lung_iphone12_trong_suot.png" alt="Ảnh sản phẩm" style="width:100%;border-radius:12px;" />
+            </div>
+            <div class="gallery__thumbs" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(80px,1fr));gap:10px;padding:0 14px 14px;">
+            </div>
+          </div>
+        </section>
+
+        <!-- Info -->
+        <section class="product-info" style="border:1px solid var(--border);border-radius:16px;padding:16px;background:var(--bg);">
+          <h1 id="p-name" style="margin:0 0 8px 0;font-size:clamp(20px,3vw,28px)">Tên sản phẩm</h1>
+          <div style="display:flex;align-items:center;gap:8px;margin:4px 0 12px 0;">
+            <span id="p-model" class="chip">iPhone 12</span>
+            <span class="chip" id="p-stock">Còn hàng</span>
+          </div>
+
+          <div style="display:flex;align-items:baseline;gap:10px;margin:10px 0 16px;">
+            <strong id="p-price" class="price" style="font-size:clamp(20px,3.4vw,28px)">0₫</strong>
+            <span id="p-oldprice" style="color:var(--muted);text-decoration:line-through;display:none"></span>
+          </div>
+
+          <div class="field" style="margin-bottom:10px;">
+            <label for="opt-color">Màu sắc</label>
+            <div id="color-swatches" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px;"></div>
+          </div>
+
+          <div class="field" style="margin-bottom:14px;max-width:160px;">
+            <label for="qty">Số lượng</label>
+            <input id="qty" type="number" min="1" value="1" style="padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:var(--bg);color:var(--fg);width:100%;">
+          </div>
+
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin:14px 0;">
+            <button id="btn-add" class="btn btn--primary">Thêm vào giỏ</button>
+            <a class="btn btn--ghost" href="cart.html">Xem giỏ hàng</a>
+          </div>
+
+          <hr style="border:none;height:1px;background:var(--border);margin:16px 0">
+
+          <div>
+            <h3 style="margin:0 0 8px 0;">Mô tả</h3>
+            <p id="p-desc" style="margin:0;color:var(--fg)"></p>
+          </div>
+
+          <div style="margin-top:14px;">
+            <h3 style="margin:0 0 8px 0;">Thông số</h3>
+            <ul id="p-specs" style="margin:0;padding-left:18px;display:grid;gap:6px;"></ul>
+          </div>
+        </section>
+      </div>
+
+      <section class="section" style="padding-top:24px;">
+        <div class="section__head">
+          <h2>Sản phẩm liên quan</h2>
+          <a class="link" id="related-link" href="products.html">Xem thêm &rarr;</a>
+        </div>
+        <div id="related-grid" class="grid grid--products"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <h4>Ốp lưng iPhone Store</h4>
+        <p>Shop ốp lưng đẹp, bền, nhẹ – hợp mọi phong cách.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Liên kết</h4>
+        <ul>
+          <li><a href="products.html">Sản phẩm</a></li>
+          <li><a href="cart.html">Giỏ hàng</a></li>
+          <li><a href="checkout.html">Thanh toán</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>Email: support@oplung.store</li>
+          <li>Hotline: 0900 000 000</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__copy">© <span id="year"></span> Oplung Store.</div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script>
+    // Product "DB" mẫu
+    const productDB = {
+      P001: { id:"P001", name:"Ốp trong suốt iPhone 12", model:"iphone12", price:129000, oldPrice:159000,
+        colors:[{code:"trong-suot",label:"Trong suốt",img:"images/op_lung_iphone12_trong_suot.png"},{code:"den",label:"Đen",img:"images/oplung-iphone12-black.png"}],
+        desc:"Ốp lưng trong suốt cho iPhone 12, chất liệu TPU đàn hồi, hạn chế ố vàng, ôm khít máy.",
+        specs:["Chất liệu: TPU","Độ dày: 1.2mm","Trọng lượng: ~18g","Chống trầy xước nhẹ"],
+        gallery:["images/op_lung_iphone12_trong_suot.png","images/op_lung_iphone12_trong_suot.png.png","images/oplung-iphone12-back.png"],
+        related:["P002","P003"]
+      },
+      P002: { id:"P002", name:"Ốp nhám đen iPhone 13", model:"iphone13", price:149000, oldPrice:179000,
+        colors:[{code:"den",label:"Đen nhám",img:"images/op_lung_iphone13_den_nham.png"},{code:"trang",label:"Trắng",img:"images/oplung-iphone13-white.png"}],
+        desc:"Bề mặt nhám chống bám vân tay, bảo vệ camera và viền máy tốt cho iPhone 13.",
+        specs:["Chất liệu: PC + TPU","Viền bo chống sốc","Bề mặt nhám mịn","Bảo vệ cụm camera"],
+        gallery:["images/op_lung_iphone13_den_nham","images/op_lung_iphone13_den_nham.png"],
+        related:["P001","P004"]
+      },
+      P003: { id:"P003", name:"Ốp viền trắng iPhone 14", model:"iphone14", price:159000, oldPrice:0,
+        colors:[{code:"trang",label:"Trắng viền",img:"images/op_lung_iphone14_vien_trang.png"},{code:"den",label:"Đen viền",img:"images/oplung-iphone14-black.png"}],
+        desc:"Viền trắng nhã nhặn, nâng viền màn hình và camera tránh trầy xước cho iPhone 14.",
+        specs:["Chất liệu: TPU","Viền cao bảo vệ","Tương thích sạc MagSafe (mỏng)"],
+        gallery:["images/op_lung_iphone14_vien_trang.png","images/op_lung_iphone14_vien_trang.png"],
+        related:["P004","P002"]
+      },
+      P004: { id:"P004", name:"Ốp chống sốc iPhone 15", model:"iphone15", price:189000, oldPrice:219000,
+        colors:[{code:"trong-suot",label:"Trong suốt",img:"images/op_lung_iphone15_chong_xoc.png"},{code:"den",label:"Đen viền dày",img:"images/oplung-iphone15-black.png"}],
+        desc:"Ốp chống sốc viền dày, chống rơi tốt cho iPhone 15, giữ dáng máy chắc chắn.",
+        specs:["Chống sốc viền dày","Chất liệu TPU+PC","Nút bấm êm tay"],
+        gallery:["images/op_lung_iphone15_chong_xoc.png","images/op_lung_iphone15_chong_xoc.png"],
+        related:["P003","P001"]
+      }
+    };
+
+    const $ = (sel, root=document) => root.querySelector(sel);
+    const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+    const fmtVND = n => (n||0).toLocaleString('vi-VN') + '₫';
+
+    (function init(){
+      const params = new URLSearchParams(location.search);
+      const pid = params.get('id') || 'P001';
+      const data = productDB[pid];
+      if (!data) return renderNotFound();
+      renderProduct(data);
+      bindActions(data);
+      renderRelated(data);
+    })();
+
+    function renderNotFound(){
+      const wrap = $('.container');
+      wrap.innerHTML = `
+        <h1>Không tìm thấy sản phẩm</h1>
+        <p>Sản phẩm bạn tìm có thể đã bị xoá hoặc không tồn tại.</p>
+        <p><a class="btn btn--primary" href="products.html">Xem danh sách sản phẩm</a></p>
+      `;
+    }
+
+    function renderProduct(p){
+      $('#p-name').textContent = p.name;
+      $('#p-model').textContent = p.model.replace('iphone','iPhone ');
+      $('#p-price').textContent = fmtVND(p.price);
+
+      const old = $('#p-oldprice');
+      if (p.oldPrice && p.oldPrice > p.price){
+        old.style.display = 'inline';
+        old.textContent = fmtVND(p.oldPrice);
+      } else old.style.display = 'none';
+
+      $('#p-desc').textContent = p.desc || '';
+      const specUL = $('#p-specs'); specUL.innerHTML = '';
+      (p.specs||[]).forEach(s=>{
+        const li = document.createElement('li');
+        li.textContent = s; specUL.appendChild(li);
+      });
+
+      const mainImg = $('#main-img');
+      const thumbs = $('.gallery__thumbs');
+      mainImg.src = (p.gallery && p.gallery[0]) || (p.colors?.[0]?.img) || 'images/op_lung_iphone12_trong_suot.png';
+      thumbs.innerHTML = '';
+      (p.gallery||[]).forEach((src,idx)=>{
+        const btn = document.createElement('button');
+        btn.type='button';
+        btn.style.border='1px solid var(--border)';
+        btn.style.borderRadius='10px';
+        btn.style.background='var(--bg)';
+        btn.style.padding='6px';
+        btn.style.cursor='pointer';
+        btn.innerHTML = `<img src="${src}" alt="thumb ${idx+1}" style="border-radius:8px;">`;
+        btn.addEventListener('click', ()=> mainImg.src = src);
+        thumbs.appendChild(btn);
+      });
+
+      const sw = $('#color-swatches'); sw.innerHTML = '';
+      (p.colors||[]).forEach((c, idx)=>{
+        const b = document.createElement('button');
+        b.type='button'; b.className='chip'; b.dataset.color = c.code; b.textContent = c.label;
+        if (idx===0) b.classList.add('is-active');
+        b.addEventListener('click', ()=>{
+          $$('.chip.is-active', sw).forEach(x=>x.classList.remove('is-active'));
+          b.classList.add('is-active');
+          if (c.img) $('#main-img').src = c.img;
+        });
+        sw.appendChild(b);
+      });
+    }
+
+    function bindActions(p){
+      $('#btn-add').addEventListener('click', ()=>{
+        const qty = Math.max(1, parseInt($('#qty').value || '1', 10));
+        const active = $('#color-swatches .chip.is-active');
+        const colorCode  = active?.dataset.color || (p.colors?.[0]?.code) || '';
+        const colorLabel = active?.textContent?.trim() || (p.colors?.[0]?.label) || '';
+
+        Store.addToCart({
+          id:   p.id + (colorCode ? ('-' + colorCode) : ''),
+          name: p.name + (colorLabel ? (' - ' + colorLabel) : ''),
+          price: p.price,
+          img:  $('#main-img')?.src || '',
+          qty
+        });
+
+        const btn = $('#btn-add');
+        const oldText = btn.textContent;
+        btn.textContent = 'Đã thêm ✓';
+        setTimeout(()=> btn.textContent = oldText, 1100);
+      });
+    }
+
+    function renderRelated(p){
+      const grid = $('#related-grid'); grid.innerHTML = '';
+      const list = (p.related || []).map(id => productDB[id]).filter(Boolean);
+      list.forEach(r=>{
+        const imgSrc = (r.gallery && r.gallery[0]) || (r.colors?.[0]?.img) || 'images/op_lung_iphone12_trong_suot.png';
+        const card = document.createElement('article');
+        card.className = 'product-card';
+        card.dataset.id = r.id;
+        card.dataset.model = r.model;
+        card.dataset.color = r.colors?.[0]?.code || '';
+        card.dataset.name  = r.name;
+        card.dataset.price = r.price;
+        card.innerHTML = `
+          <a class="product-card__link" href="product.html?id=${r.id}">
+            <img src="${imgSrc}" alt="${r.name}" />
+            <h3 class="product-card__title">${r.name}</h3>
+          </a>
+          <div class="product-card__price"><span class="price">${fmtVND(r.price)}</span></div>
+          <div class="product-card__actions">
+            <button class="btn btn--sm btn--secondary" data-add-to-cart>Thêm vào giỏ</button>
+          </div>`;
+        grid.appendChild(card);
+      });
+      Store.bindAddToCartInDoc(grid);
+      $('#related-link').href = `products.html?model=${encodeURIComponent(p.model)}`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thanh toán | Ốp lưng iPhone Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/favicon.png" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html"><span class="logo__mark">ỐP</span><span class="logo__text">iPhone Store</span></a>
+      <nav class="nav">
+        <a href="products.html">Sản phẩm</a>
+        <a href="cart.html" class="cart-link">Giỏ hàng <span id="cart-count" class="badge">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>Thanh toán</h1>
+
+      <div id="empty" style="display:none; border:1px solid var(--border); border-radius:16px; padding:16px; background:var(--surface);">
+        <p>Giỏ hàng trống. Hãy thêm sản phẩm trước khi thanh toán.</p>
+        <a class="btn btn--primary" href="products.html">Quay lại mua sắm</a>
+      </div>
+
+      <div id="checkout-wrap" style="display:none;">
+        <div class="grid" style="grid-template-columns:1fr; gap:16px;">
+          <section style="border:1px solid var(--border); border-radius:16px; padding:16px; background:var(--bg);">
+            <h2 style="margin:0 0 12px 0;">Thông tin giao hàng</h2>
+
+            <form id="form-checkout" novalidate>
+              <div class="grid" style="grid-template-columns:1fr; gap:12px;">
+                <div class="field">
+                  <label for="name">Họ và tên</label>
+                  <input id="name" name="name" type="text" placeholder="Nguyễn Văn A" required
+                         style="padding:10px 12px; border:1px solid var(--border); border-radius:10px; background:var(--bg); color:var(--fg);">
+                  <small class="err" style="color:#e11d48; display:none;">Vui lòng nhập họ tên</small>
+                </div>
+
+                <div class="field">
+                  <label for="phone">Số điện thoại</label>
+                  <input id="phone" name="phone" type="tel" placeholder="09xxxxxxxx" required
+                         style="padding:10px 12px; border:1px solid var(--border); border-radius:10px; background:var(--bg); color:var(--fg);">
+                  <small class="err" style="color:#e11d48; display:none;">SĐT 9–11 chữ số</small>
+                </div>
+
+                <div class="field">
+                  <label for="address">Địa chỉ</label>
+                  <input id="address" name="address" type="text" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành" required
+                         style="padding:10px 12px; border:1px solid var(--border); border-radius:10px; background:var(--bg); color:var(--fg);">
+                  <small class="err" style="color:#e11d48; display:none;">Vui lòng nhập địa chỉ</small>
+                </div>
+
+                <div class="field">
+                  <label for="note">Ghi chú (tuỳ chọn)</label>
+                  <textarea id="note" name="note" rows="3" placeholder="Ví dụ: Giao giờ hành chính"
+                            style="padding:10px 12px; border:1px solid var(--border); border-radius:10px; background:var(--bg); color:var(--fg);"></textarea>
+                </div>
+              </div>
+
+              <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+                <button id="btn-order" class="btn btn--primary" type="submit">Đặt hàng</button>
+                <a class="btn btn--ghost" href="cart.html">Quay lại giỏ</a>
+              </div>
+            </form>
+          </section>
+
+          <section style="border:1px solid var(--border); border-radius:16px; padding:16px; background:var(--bg);">
+            <h2 style="margin:0 0 12px 0;">Đơn hàng của bạn</h2>
+            <div id="items" style="display:grid; gap:10px; margin-bottom:12px;"></div>
+            <hr style="border:none; height:1px; background:var(--border); margin:12px 0;">
+            <div style="display:grid; gap:8px;">
+              <div style="display:flex; justify-content:space-between;"><span>Tạm tính</span><strong id="sum-sub">0₫</strong></div>
+              <div style="display:flex; justify-content:space-between;"><span>Phí vận chuyển</span><strong id="sum-ship">0₫</strong></div>
+              <div style="display:flex; justify-content:space-between; font-size:18px;"><span>Tổng cộng</span><strong id="sum-total">0₫</strong></div>
+            </div>
+            <p id="ship-tip" style="margin:10px 0 0; color:var(--muted); font-size:14px;"></p>
+          </section>
+        </div>
+      </div>
+
+      <div id="success" style="display:none; border:1px solid var(--border); border-radius:16px; padding:16px; background:var(--surface);">
+        <h2>Đặt hàng thành công 🎉</h2>
+        <p>Mã đơn hàng: <strong id="order-id"></strong></p>
+        <p>Chúng tôi đã lưu đơn hàng của bạn. Nhân viên sẽ liên hệ để xác nhận.</p>
+        <a class="btn btn--primary" href="index.html">Về trang chủ</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <h4>Ốp lưng iPhone Store</h4>
+        <p>Shop ốp lưng đẹp, bền, nhẹ – hợp mọi phong cách.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Liên kết</h4>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="products.html">Sản phẩm</a></li>
+          <li><a href="cart.html">Giỏ hàng</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>Email: support@oplung.store</li>
+          <li>Hotline: 0900 000 000</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__copy">© <span id="year"></span> Oplung Store.</div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script>
+    const SHIP_THRESHOLD = 300000;
+    const SHIP_FEE = 30000;
+    const fmt = n => (n||0).toLocaleString('vi-VN') + '₫';
+    const $ = (s,r=document)=>r.querySelector(s);
+
+    (function boot(){
+      const cart = getCart();
+      if (!cart.length){
+        document.getElementById('empty').style.display = 'block';
+        return;
+      }
+      document.getElementById('checkout-wrap').style.display = 'block';
+      renderItems(cart);
+      renderSummary(cart);
+      document.getElementById('form-checkout').addEventListener('submit', onSubmit);
+    })();
+
+    function getCart(){ try { return JSON.parse(localStorage.getItem('cart')||'[]'); } catch { return []; } }
+    function clearCart(){ localStorage.setItem('cart','[]'); }
+
+    function renderItems(cart){
+      const wrap = document.getElementById('items'); wrap.innerHTML = '';
+      cart.forEach(it=>{
+        const row = document.createElement('div');
+        row.style.display = 'grid';
+        row.style.gridTemplateColumns = '64px 1fr auto';
+        row.style.gap = '10px';
+        row.innerHTML = `
+          <img src="${it.img||'images/oplung-iphone12.png'}" alt="${it.name}" style="width:64px; height:64px; object-fit:cover; border-radius:10px; border:1px solid var(--border);">
+          <div>
+            <div><strong>${it.name}</strong></div>
+            <div style="color:var(--muted); font-size:14px;">SL: ${it.qty||1}</div>
+          </div>
+          <div style="text-align:right;">
+            <div>${fmt(it.price)}</div>
+            <div style="font-weight:700;">${fmt(it.price*(it.qty||1))}</div>
+          </div>`;
+        wrap.appendChild(row);
+      });
+    }
+
+    function renderSummary(cart){
+      const sub = cart.reduce((s,i)=> s + i.price*(i.qty||1), 0);
+      const ship = sub >= SHIP_THRESHOLD || sub===0 ? 0 : SHIP_FEE;
+      const total = sub + ship;
+      document.getElementById('sum-sub').textContent = fmt(sub);
+      document.getElementById('sum-ship').textContent = fmt(ship);
+      document.getElementById('sum-total').textContent = fmt(total);
+      const remain = Math.max(0, SHIP_THRESHOLD - sub);
+      document.getElementById('ship-tip').textContent = remain>0
+        ? `Mua thêm ${fmt(remain)} để được miễn phí vận chuyển.`
+        : `Bạn đã được miễn phí vận chuyển.`;
+    }
+
+    function onSubmit(e){
+      e.preventDefault();
+      const form = e.currentTarget;
+
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const address = document.getElementById('address').value.trim();
+      const note = document.getElementById('note').value.trim();
+
+      form.querySelectorAll('.err').forEach(el=>el.style.display='none');
+      let ok = true;
+      if (!name){ form.querySelector('#name + .err').style.display='block'; ok = false; }
+      if (!/^\d{9,11}$/.test(phone)){ form.querySelector('#phone + .err').style.display='block'; ok = false; }
+      if (!address){ form.querySelector('#address + .err').style.display='block'; ok = false; }
+      if (!ok) return;
+
+      const cart = getCart();
+      const sub = cart.reduce((s,i)=> s + i.price*(i.qty||1), 0);
+      const ship = sub >= SHIP_THRESHOLD || sub===0 ? 0 : SHIP_FEE;
+      const total = sub + ship;
+
+      const order = {
+        id: 'OD' + Date.now(),
+        createdAt: new Date().toISOString(),
+        items: cart,
+        subTotal: sub,
+        shippingFee: ship,
+        total,
+        customer: { name, phone, address, note, payment: 'COD' },
+        status: 'pending'
+      };
+
+      let orders = [];
+      try { orders = JSON.parse(localStorage.getItem('orders')||'[]'); } catch {}
+      orders.push(order);
+      localStorage.setItem('orders', JSON.stringify(orders));
+
+      clearCart();
+      document.getElementById('checkout-wrap').style.display = 'none';
+      document.getElementById('success').style.display = 'block';
+      document.getElementById('order-id').textContent = order.id;
+      Store.updateCartBadge();
+    }
+  </script>
+</body>
+</html>

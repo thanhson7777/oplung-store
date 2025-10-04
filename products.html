@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sản phẩm | Ốp lưng iPhone Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/favicon.png" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html"><span class="logo__mark">ỐP</span><span class="logo__text">iPhone Store</span></a>
+      <form class="search" role="search" action="products.html" method="get">
+        <label for="q" class="sr-only">Tìm kiếm</label>
+        <input id="q" name="q" type="search" placeholder="Tìm ốp lưng, màu sắc..." />
+        <button class="btn btn--primary" type="submit">Tìm</button>
+      </form>
+      <nav class="nav">
+        <a href="products.html" aria-current="page">Sản phẩm</a>
+        <a href="cart.html" class="cart-link">Giỏ hàng <span id="cart-count" class="badge">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Title + Filters -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h1>Tất cả sản phẩm</h1>
+      </div>
+
+      <div class="filters">
+        <div class="filters__row">
+          <div class="field">
+            <label for="f-model">Dòng iPhone</label>
+            <select id="f-model">
+              <option value="">Tất cả</option>
+              <option value="iphone11">iPhone 11</option>
+              <option value="iphone12">iPhone 12</option>
+              <option value="iphone13">iPhone 13</option>
+              <option value="iphone14">iPhone 14</option>
+              <option value="iphone15">iPhone 15</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="f-color">Màu sắc</label>
+            <select id="f-color">
+              <option value="">Tất cả</option>
+              <option value="den">Đen</option>
+              <option value="trang">Trắng</option>
+              <option value="trong-suot">Trong suốt</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="f-sort">Sắp xếp</label>
+            <select id="f-sort">
+              <option value="rel">Phù hợp nhất</option>
+              <option value="price-asc">Giá tăng dần</option>
+              <option value="price-desc">Giá giảm dần</option>
+              <option value="name-asc">Tên A→Z</option>
+              <option value="name-desc">Tên Z→A</option>
+            </select>
+          </div>
+
+          <div class="field field--grow">
+            <label for="f-search">Từ khóa</label>
+            <input id="f-search" type="search" placeholder="vd: trong suốt, đen, chống sốc..." />
+          </div>
+
+          <button id="btn-clear" class="btn btn--ghost" type="button">Xóa lọc</button>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div id="product-grid" class="grid grid--products">
+        <!-- ví dụ vài sản phẩm -->
+        <article class="product-card" data-id="P001" data-model="iphone12" data-color="trong-suot" data-name="Ốp trong suốt iPhone 12" data-price="129000">
+          <a class="product-card__link" href="product.html?id=P001">
+            <img src="images/op_lung_iphone12_trong_suot.png" alt="Ốp trong suốt iPhone 12" />
+            <h3 class="product-card__title">Ốp trong suốt iPhone 12</h3>
+          </a>
+          <div class="product-card__price"><span class="price">129.000₫</span></div>
+          <div class="product-card__actions"><button class="btn btn--sm btn--secondary" data-add-to-cart>Thêm vào giỏ</button></div>
+        </article>
+
+        <article class="product-card" data-id="P002" data-model="iphone13" data-color="den" data-name="Ốp nhám đen iPhone 13" data-price="149000">
+          <a class="product-card__link" href="product.html?id=P002">
+            <img src="images/op_lung_iphone13_den_nham.png" alt="Ốp nhám đen iPhone 13" />
+            <h3 class="product-card__title">Ốp nhám đen iPhone 13</h3>
+          </a>
+          <div class="product-card__price"><span class="price">149.000₫</span></div>
+          <div class="product-card__actions"><button class="btn btn--sm btn--secondary" data-add-to-cart>Thêm vào giỏ</button></div>
+        </article>
+
+        <article class="product-card" data-id="P003" data-model="iphone14" data-color="trang" data-name="Ốp viền trắng iPhone 14" data-price="159000">
+          <a class="product-card__link" href="product.html?id=P003">
+            <img src="images/op_lung_iphone14_vien_trang.png " alt="Ốp viền trắng iPhone 14" />
+            <h3 class="product-card__title">Ốp viền trắng iPhone 14</h3>
+          </a>
+          <div class="product-card__price"><span class="price">159.000₫</span></div>
+          <div class="product-card__actions"><button class="btn btn--sm btn--secondary" data-add-to-cart>Thêm vào giỏ</button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <h4>Ốp lưng iPhone Store</h4>
+        <p>Shop ốp lưng đẹp, bền, nhẹ – hợp mọi phong cách.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Liên kết</h4>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="cart.html">Giỏ hàng</a></li>
+          <li><a href="checkout.html">Thanh toán</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>Email: support@oplung.store</li>
+          <li>Hotline: 0900 000 000</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__copy">© <span id="year"></span> Oplung Store.</div>
+  </footer>
+
+  <!-- Common + trang-specific -->
+  <script src="js/main.js" defer></script>
+  <script>
+    const $ = (sel, root=document) => root.querySelector(sel);
+    const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+
+    function applyFiltersFromUI() {
+      const model = $('#f-model').value;
+      const color = $('#f-color').value;
+      const sort  = $('#f-sort').value;
+      const kw    = $('#f-search').value.trim().toLowerCase();
+
+      const cards = $$('.product-card');
+      cards.forEach(c => {
+        const okModel = !model || c.dataset.model === model;
+        const okColor = !color || c.dataset.color === color;
+        const text = (c.dataset.name + ' ' + c.dataset.color + ' ' + c.dataset.model).toLowerCase();
+        const okSearch = !kw || text.includes(kw);
+        c.style.display = (okModel && okColor && okSearch) ? '' : 'none';
+      });
+
+      const grid = $('#product-grid');
+      const visibles = cards.filter(c => c.style.display !== 'none');
+      const sorters = {
+        'price-asc': (a,b)=> (+a.dataset.price)-(+b.dataset.price),
+        'price-desc': (a,b)=> (+b.dataset.price)-(+a.dataset.price),
+        'name-asc': (a,b)=> a.dataset.name.localeCompare(b.dataset.name, 'vi'),
+        'name-desc': (a,b)=> b.dataset.name.localeCompare(a.dataset.name, 'vi'),
+        'rel': ()=>0
+      };
+      visibles.sort(sorters[sort] || sorters['rel']).forEach(el => grid.appendChild(el));
+    }
+
+    function initFromURL() {
+      const p = new URLSearchParams(location.search);
+      if (p.get('model'))  $('#f-model').value = p.get('model');
+      if (p.get('color'))  $('#f-color').value = p.get('color');
+      if (p.get('q'))      $('#f-search').value = p.get('q');
+      if (p.get('sort'))   $('#f-sort').value = p.get('sort');
+      applyFiltersFromUI();
+    }
+
+    function bindFilterEvents() {
+      ['f-model','f-color','f-sort','f-search'].forEach(id=>{
+        $('#'+id).addEventListener(id==='f-search'?'input':'change', applyFiltersFromUI);
+      });
+      $('#btn-clear').addEventListener('click', () => {
+        $('#f-model').value = '';
+        $('#f-color').value = '';
+        $('#f-sort').value  = 'rel';
+        $('#f-search').value= '';
+        history.replaceState(null,'',location.pathname);
+        applyFiltersFromUI();
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      bindFilterEvents();
+      initFromURL();
+      // Nếu có render động thêm sản phẩm: Store.bindAddToCartInDoc(document);
+    });
+  </script>
+</body>
+</html>
